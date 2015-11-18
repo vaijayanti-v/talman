@@ -1,9 +1,9 @@
 library(shiny)
 
 shinyUI(fluidPage(
-titlePanel("new App"),
+titlePanel("Employee Longevity"),
 sidebarLayout(
-  sidebarPanel("sidebar panel",
+  sidebarPanel("Enter candidate details here",
                selectInput("college", label="Select College",
                            choices=list("PESITB"=10,"RVCEB"=9,"UVCEB"=8,"JSSCEB"=3,"MVITB"=4,"BMSCEB"=5,"MSRITB"=2,"BITB"=1,"NITS"=7,"MITM"=6), selected=1
                ),
@@ -14,20 +14,22 @@ sidebarLayout(
                            choices=list("male"=2,"female"=3), selected=2
                ),
                selectInput("branch", label="Select Branch",
-                           choices=list("CSE"=5,"ECE"=4,"EEE"=2,"IS/IT"=3,"Inst"=2,"Mech"=2), selected=2
+                           choices=list("CSE"=5,"ECE"=4,"EEE"=2,"IS/IT"=3,"Inst"=2,"Mech"=2), selected=5
                ),
                selectInput("recruitment", label="Select Mode of recruitment",
                            choices=list("OnCampus"=3,"OffCampus"=1,"PoolCampus"=2), selected=1
                )               
                
                ),
-  position = "left",
-  mainPanel(textOutput("longevity"))
+  
+  mainPanel(align="center",
+            textOutput("longevity"))
   ),
 
 
 
 fluidRow(
+  align="center",
   submitButton("Submit")
 )
 ))
