@@ -23,7 +23,10 @@ sidebarLayout(
                ),
   
   mainPanel(align="center",
-            textOutput("longevity"))
+            h2(textOutput("longevity")),
+            h2(textOutput("longevity_NN"))
+#             imageOutput("image")
+          )
   ),
 
 
